@@ -1,0 +1,42 @@
+:root {
+    --background-color: #e5e5e5;
+    --editor-bg: #2d2d2d; 
+    --text-color: #d9d9d9; 
+    --options-bg: #4a4a4a; 
+    --border-color: #1a1a1a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(241, 241, 241);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#options {
+    background-color: var(--options-bg);
+    border-bottom: 1px solid black;
+}
+
+#editor {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#text-content {
+    flex-grow: 1;
+    background-color: var(--editor-bg);
+    color: rgb(237, 237, 237);
+}
+
+#text-content * {
+    margin: 0;
+    padding: 0;
+}
+
+#text-content:focus {
+    outline: 0px solid transparent;
+}
