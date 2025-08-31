@@ -21,6 +21,28 @@ body {
     border-bottom: 1px solid black;
 }
 
+
+select {
+  border: 2px solid #eeeeee;
+  background: #eeeeee;
+  padding: 4px;
+  transition: 0.4s;
+  font-size: .6rem;
+}
+
+select:hover,
+select:focus {
+  border: 2px solid #bebebe;
+  background: #bebebe;
+  cursor: pointer;
+}
+
+option {
+    font-size: .6rem;
+}
+
+
+
 #editor {
     min-height: 100vh;
     display: flex;
