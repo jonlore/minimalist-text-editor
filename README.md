@@ -2,11 +2,6 @@
 
 A minimalist web-based text editor built with HTML, CSS, and JavaScript.
 
-## Features
-- Content-editable text area for real-time editing.
-- Dropdown for selecting text styles (Normal, H1, H2, H3).
-- Planned: Additional customization options, improved formatting tools, and support for saving or sharing content
-
 ## Getting Started
 
 ### Setup
