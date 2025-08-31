@@ -17,7 +17,7 @@ A minimalist web-based text editor built with HTML, CSS, and JavaScript.
 2. Open `index.html` in a browser to use the editor.
 
 ## Contributing
-If you'd like to get involved, feel free to explore open issues or suggest new features. For details on how to contribute, please see CONTRIBUTING.md.
+If you'd like to get involved, feel free to explore open issues or suggest new features.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
