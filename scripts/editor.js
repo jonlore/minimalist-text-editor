@@ -10,10 +10,20 @@ textStyle.addEventListener("change", (e) => {
 
 textContent.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
-        e.preventDefault();
-          document.execCommand("insertHTML", false, `<${textType}><br></${textType}>`);
+        const selection = window.getSelection();
+        if (!selection.rangeCount) return;
+
+        const parent = selection.anchorNode?.parentElement;
+        const isInsideList = parent && (
+            parent.closest("ul") || parent.closest("ol")
+        );
+
+        if (!isInsideList) {
+            e.preventDefault();
+            document.execCommand("insertHTML", false, `<${textType}><br></${textType}>`);
+        }
     }
-})
+});
 
 
 //Bold and italic functions
@@ -26,3 +36,14 @@ document.getElementById("btn-italic").addEventListener("click", () => {
     document.execCommand("italic", false, null);
     textContent.focus();
 });
+
+//Unordered & Ordered list functions
+document.getElementById("btn-list-ordered").addEventListener("click", () => {
+    document.execCommand("insertOrderedList");
+    textContent.focus();
+})
+
+document.getElementById("btn-list-unordered").addEventListener("click", () => {
+    document.execCommand("insertUnorderedList");
+    textContent.focus();
+})
