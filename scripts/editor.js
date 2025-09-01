@@ -14,3 +14,15 @@ textContent.addEventListener("keydown", (e) => {
           document.execCommand("insertHTML", false, `<${textType}><br></${textType}>`);
     }
 })
+
+
+//Bold and italic functions
+document.getElementById("btn-bold").addEventListener("click", () => {
+    document.execCommand("bold", false, null);
+    textContent.focus();
+});
+
+document.getElementById("btn-italic").addEventListener("click", () => {
+    document.execCommand("italic", false, null);
+    textContent.focus();
+});

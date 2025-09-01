@@ -19,15 +19,28 @@ body {
 #options {
     background-color: var(--options-bg);
     border-bottom: 1px solid black;
+    display: flex;
 }
 
+#options button:hover {
+    border: 2px solid #818181;
+    background-color: #818181;
+}
 
-select {
+#btn-bold {
+    font-weight: bold;
+}
+#btn-italic {
+    font-style: italic;
+}
+
+select, button {
   border: 2px solid #eeeeee;
   background: #eeeeee;
-  padding: 4px;
+  padding: 10px;
   transition: 0.4s;
-  font-size: .6rem;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 select:hover,
@@ -38,7 +51,7 @@ select:focus {
 }
 
 option {
-    font-size: .6rem;
+    font-size: 1.3rem;
 }
 
 
@@ -52,6 +65,7 @@ option {
     flex-grow: 1;
     background-color: var(--editor-bg);
     color: rgb(237, 237, 237);
+    padding: 10px;
 }
 
 #text-content * {
