@@ -76,3 +76,12 @@ option {
 #text-content:focus {
     outline: 0px solid transparent;
 }
+
+/* Color Picker Styles */
+#btn-text-color {
+    position: relative;
+}
+
+#btn-text-color:hover #color-picker {
+    pointer-events: auto;
+}

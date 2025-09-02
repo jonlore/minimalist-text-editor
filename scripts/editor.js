@@ -47,3 +47,17 @@ document.getElementById("btn-list-unordered").addEventListener("click", () => {
     document.execCommand("insertUnorderedList");
     textContent.focus();
 })
+
+// Text color functionality
+document.getElementById("btn-text-color").addEventListener("click", () => {
+    const colorPicker = document.getElementById("color-picker");
+    colorPicker.click();
+});
+
+// Apply color to selected text immediately when color is picked
+document.getElementById("color-picker").addEventListener("input", (e) => {
+    const color = e.target.value;
+    if (window.getSelection().toString()) {
+        document.execCommand("foreColor", false, color);
+    }
+});
